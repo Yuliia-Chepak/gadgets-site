@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="uk">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+
+        <header class="header">
+            <div class="container header__inner">
+                <a class="logo" href="#">
+                    <span class="logo__icon" aria-hidden="true"></span>
+        <span class="logo__text">Ілюша Блищак</span>
+                </a>
+                <nav class="nav" aria-label="Головне меню">
+                    <a class="nav__link" href="#">ГОЛОВНА</a>
+                    <a class="nav__link" href="#">ТОВАРИ</a>
+                    <a class="nav__link" href="#">КОНТАКТИ</a>
+                    <a class="nav__link" href="#">ПІДТРИМКА</a>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+
+            <section class="hero">
+                <div class="container">
+                    <div class="hero__box">
+                        <div class="hero__left">
+                            <h1 class="hero__title">Всесвіт гаджетів<br>для тебе.</h1>
+                            <a class="btn btn--primary" href="#" id="toCatalog">Переглянути каталог</a>
+                        </div>
+                        <div class="hero__right" aria-label="зображення ноутбука">
+                            <img class="hero__img" src="img/64_600-removebg-preview 1.png" alt="Ноутбук" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="products">
+                <div class="container">
+                    <h2 class="section__title">Хіти продажів</h2>
+
+                    <div class="products">
+                        <article class="product" data-name="Laptop" data-price="40 000 грн">
+                            <div class="product__img">
+                                <img src="img/leptop.png" alt="Ноутбук" />
+                            </div>
+                            <h3 class="product__name">Laptop</h3>
+                            <p class="product__price">40 000 грн</p>
+                        </article>
+
+                         <article class="product" data-name="Smart watch" data-price="5 000 грн">
+                            <div class="product__img">
+                                <img src="img/smartwoch.png" alt="Smart watch" />
+                            </div>
+                            <h3 class="product__name">Smart watch</h3>
+                            <p class="product__price">5 000 грн</p>
+                        </article>
+
+                         <article class="product" data-name="Headphones" data-price="3 000 грн">
+                            <div class="product__img">
+                                <img src="img/hetpons.png" alt="Headphones" />
+                            </div>
+                            <h3 class="product__name">Headphones</h3>
+                            <p class="product__price">3 000 грн</p>
+                        </article>
+
+                         <article class="product" data-name="Tablet" data-price="20 000 грн">
+                            <div class="product__img">
+                                <img src="img/tablet.png" alt="Tablet" />
+                            </div>
+                            <h3 class="product__name">Tablet</h3>
+                            <p class="product__price">20 000 грн</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="cta">
+      <div class="container">
+        <div class="cta__box">
+          <h2 class="cta__title">Не знайшли те,<br>що хотіли?</h2>
+
+          <div class="cta__img" aria-hidden="true">
+            <img src="img/contact-img.png" alt="" />
+          </div>
+
+          <div class="cta__actions">
+  <input class="input" id="phone" type="tel" placeholder="Ваш номер телефону" />
+  <button class="btn btn--dark btn--small" id="callBtn">Зателефонуйте</button>
+</div>
+<p class="cta__msg" id="ctaMsg" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+        </main>
+        <footer class="footer">
+            <div class="container footer__inner">
+
+                <div class="footer__brand">
+                <div class="logo logo--footer">
+                    <span class="logo__icon" aria-hidden="true">
+                    </span>
+                    <span class="logo__text">Ілюша Блищак</span>
+                </div> 
+                </div>
+                <div class="footer__cols">
+        <div class="footer__col">
+          <h4 class="footer__title">Контакти</h4>
+          <a class="footer__link" href="tel:+380441234567">+38 (044) 123-45-67</a>
+          <a class="footer__link" href="info@gadgety.ua">info@gadgety.ua</a>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__title">Соціальні мережі</h4>
+          <a class="footer__link" href="#">Instagram</a>
+          <a class="footer__link" href="#">Youtube</a>
+        </div>
+      </div>
+            </div>
+        </footer>
+        <div class="modal" id="modal" aria-hidden="true">
+  <div class="modal__overlay" data-close="true"></div>
+
+  <div class="modal__content" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal__close" aria-label="Закрити" data-close="true">✕</button>
+    <h3 class="modal__title" id="modalTitle"></h3>
+    <p class="modal__price" id="modalPrice"></p>
+    <button class="btn btn--primary btn--small" id="buyBtn">Додати в кошик</button>
+    <p class="modal__msg" id="modalMsg" aria-live="polite"></p>
+  </div>
+</div>
+        <script src="script.js"></script>
+    </body>
+</html>
