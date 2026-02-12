@@ -5,6 +5,26 @@ $('#toCatalog').addEventListener('click', (e) => {
   $("#products").scrollIntoView({ behavior: "smooth" });
 });
 
+const carousel = $('#carousel');
+const next = $('#next');
+const prev = $('#prev');
+
+if (next && prev && carousel) {
+  const scroullAmount = 240;
+
+  next.addEventListener('click', () => {
+    carousel.scrollBy({ left: scroullAmount, behavior: 'smooth' });
+  });
+
+  prev.addEventListener('click', () => {
+    carousel.scrollBy({ left: -scroullAmount, behavior: 'smooth' });
+  });
+
+  setInterval(() => {
+    carousel.scrollBy({ left: scroullAmount, behavior: 'smooth' });
+  }, 4000);
+}
+
 const modal = $('#modal');
 const modalTitle = $('#modalTitle');
 const modalPrice = $('#modalPrice');
